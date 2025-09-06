@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +49,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Agricultural theme colors
+        farm: {
+          green: "hsl(var(--farm-green))",
+          "green-light": "hsl(var(--farm-green-light))",
+          "green-dark": "hsl(var(--farm-green-dark))",
+        },
+        earth: {
+          brown: "hsl(var(--earth-brown))",
+        },
+        harvest: {
+          orange: "hsl(var(--harvest-orange))",
+        },
+        sky: {
+          blue: "hsl(var(--sky-blue))",
+        },
+        cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +80,15 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-feature": "var(--gradient-feature)",
+        "gradient-bg": "var(--gradient-bg)",
+      },
+      boxShadow: {
+        "feature": "var(--shadow-feature)",
+        "card": "var(--shadow-card)",
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +107,30 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "slide-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "slide-up": "slide-up 0.6s ease-out",
       },
     },
   },
